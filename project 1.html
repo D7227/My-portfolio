@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Peer-Graded Project</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <script>
+    function showPopup(message) {
+      var popup = document.createElement("div");
+      popup.className = "popup";
+      popup.innerHTML = `<h2>Successful</h2><p>${message}</p>`;
+      document.body.appendChild(popup);
+
+      setTimeout(function () {
+        document.body.removeChild(popup);
+      }, 3000);
+    }
+
+    function submitRecommendation(event) {
+      event.preventDefault(); // Prevent the form from submitting the traditional way
+
+      // Get the recommendation text and user's name from the form
+      var recommendationText = document.getElementById("recommendationText").value;
+      var yourName = document.getElementById("yourName").value;
+
+      // Perform any additional processing or validation as needed
+
+      // Show the success popup with a custom message
+      showPopup(`Thank you, ${yourName}! Your recommendation has been submitted successfully.`);
+    }
+  </script>
+
+</head>
+
+<body>
+  <div class="container">
+    <header>
+      <div class="header-content">
+        <div class="styled-name">Darshan Italiya</div>
+        <div class="contact-info">
+          <div class="contact-item">
+            <img src="noun-email-1003621.png" alt="Email Icon" class="icon">
+            <span>darshanitaliya1994@gmail.com</span>
+          </div>
+          <div class="contact-item">
+            <img src="noun-call-1977398.png" alt="Phone Icon" class="icon">
+            <span>+91 8866644497</span>
+          </div>
+        </div>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#project-details">Project Details</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#recommendations">Recommendations</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <section id="about">
+      <div class="profile">
+        <img src="WhatsApp Image 2023-12-11 at 3.01.45 PM.jpeg" alt="Profile Image">
+        <div class="text-content">
+          <h2>Darshan Italiya</h2>
+          <p>I am a UI/UX Designer with more than 3 years of experience.
+            Upgrading myself with front-end development to explore new avenues
+            and better understanding of UX principles to provide benefits
+            to my clients.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="project-details">
+      <div class="project-details content">
+        <h2>Mindfulmoves App</h2>
+        <p>Created Complete Project Of mindfulmove app with the help of figma.
+          Purpose of this app is to provide Inner peace to people in this bussy word.</p>
+      </div>
+      <div class="project-details content">
+        <h2>EmiExchange App</h2>
+        <p>Created Complete Project Of mindfulmove app with the help of figma.
+          Purpose of this app is to provide Inner peace to people in this bussy word.</p>
+      </div>
+      <div class="project-details content">
+        <h2>Exit fund</h2>
+        <p>Created Complete Project Of mindfulmove app with the help of figma.Purpose of this app is to provide Inner
+          peace to people in this bussy word.</p>
+      </div>
+      <!-- Project details go here -->
+    </section>
+
+    <section id="skills">
+      <div class="skill-card">
+        <img src="icons8-html-logo-48.png" alt="HTML Icon" class="skill-icon">
+        <h3>HTML</h3>
+        <p>Building the structure of web pages with HTML.</p>
+      </div>
+
+      <div class="skill-card">
+        <img src="icons8-css-logo-48.png" alt="CSS Icon" class="skill-icon">
+        <h3>CSS</h3>
+        <p>Styling and designing web pages with CSS.</p>
+      </div>
+
+      <div class="skill-card">
+        <img src="icons8-javascript-logo-64.png" alt="JavaScript Icon" class="skill-icon">
+        <h3>JavaScript</h3>
+        <p>Adding interactivity and dynamic features using JavaScript.</p>
+      </div>
+
+      <div class="skill-card">
+        <img src="icons8-figma-48.png" alt="Design Icon" class="skill-icon">
+        <h3>UI/UX Design</h3>
+        <p>Creating user-friendly and visually appealing designs.</p>
+      </div>
+    </section>
+
+    <section id="recommendations">
+      <div class="testimonial-card">
+        <div class="testimonial-content">
+          <p>"Darshan is an amazing UI/UX Designer! His attention to detail and creative approach greatly impressed us.
+            We highly recommend his services."</p>
+          <span class="testimonial-author">John Doe, CEO</span>
+        </div>
+      </div>
+
+      <div class="testimonial-card">
+        <div class="testimonial-content">
+          <p>"Working with Darshan has been a pleasure. He not only understands design but also the user experience. Our
+            projects have greatly benefited from his expertise."</p>
+          <span class="testimonial-author">Jane Smith, CTO</span>
+        </div>
+      </div>
+
+      <div class="testimonial-card">
+        <div class="testimonial-content">
+          <p>"Darshan's designs are not only visually appealing but also intuitive. His commitment to delivering quality
+            work is commendable. Highly recommended!"</p>
+          <span class="testimonial-author">Sam Johnson, Product Manager</span>
+        </div>
+      </div>
+
+      <div class="testimonial-card">
+        <div class="testimonial-content">
+          <p>"Working with Darshan has been a pleasure. He not only understands design but also the user experience. Our
+            projects have greatly benefited from his expertise."</p>
+          <span class="testimonial-author">Jane Smith, CTO</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Recommendation Form -->
+    <div class="recommendation-form">
+      <h2>Submit a Recommendation</h2>
+      <form id="recommendationForm" onsubmit="submitRecommendation(event)">
+        <label for="recommendationText">Your Recommendation:</label>
+        <textarea id="recommendationText" name="recommendationText" rows="4" required></textarea>
+
+        <label for="yourName">Your Name:</label>
+        <input type="text" id="yourName" name="yourName" required>
+
+        <button type="submit">Submit Recommendation</button>
+      </form>
+    </div>
+
+    <!-- ... Existing HTML code ... -->
+
+<!-- FAB for scrolling to top -->
+<button class="fab" onclick="scrollToTop()">
+  <i class="fas fa-home"></i>
+</button>
+
+<script>
+  // Function to scroll to the top of the page
+  function scrollToTop() {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  }
+</script>
+</body>
+
+</body>
+
+</body>
+
+</html>

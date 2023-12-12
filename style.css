@@ -1,0 +1,329 @@
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f8f8f8;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+header {
+  background-color: #333;
+  max-height: 100px;
+  color: white;
+  padding: 20px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-content {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  /* Arrange items vertically */
+  align-items: center;
+  /* Center items horizontally */
+}
+
+.styled-name {
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #ffcc00;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  /* Arrange items vertically */
+  align-items: left;
+  /* Center items horizontally */
+}
+
+.contact-item {
+  margin: 10px 0;
+  /* Adjust spacing between items */
+  display: flex;
+  align-items: center;
+}
+
+.icon {
+  border-radius: 24%;
+  background-color: #ffffff;
+  width: 20px;
+  height: 20px;
+  margin-right: 5px;
+}
+
+nav ul {
+  list-style-type: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+nav li {
+  margin-right: 24px;
+}
+
+nav a {
+  text-decoration: none;
+  color: white;
+  transition: color 0.3s;
+  font-size: 16px;
+}
+
+nav a:hover {
+  color: gold;
+}
+
+#about,
+#project-details,
+#skills,
+#recommendations {
+  padding: 40px 0;
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.profile img {
+  width: 500px;
+  border-radius: 0%;
+  margin-right: 20px;
+}
+
+.text-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.text-content h2,
+.text-content p {
+  text-align: center;
+}
+
+/* Style for Project Details Section */
+.project-details-section {
+  background-color: #f8f8f8;
+  padding: 40px;
+  text-align: center;
+}
+
+/* Style for Project Details Content */
+.project-details.content {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin: 20px 0;
+  text-align: left;
+}
+
+.project-details.content h2 {
+  color: #007BFF;
+}
+
+.project-details.content p {
+  color: #333;
+  line-height: 1.5;
+}
+
+
+#skills {
+  display: flex;
+  justify-content: space-between;
+  /* Add space between skill cards */
+  flex-wrap: wrap;
+  /* Allow cards to wrap to the next row */
+}
+
+.skill-card {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin-bottom: 20px;
+  text-align: center;
+  width: calc(25% - 20px);
+  /* 25% width with 20px margin on both sides */
+  box-sizing: border-box;
+  /* Include padding and border in total width */
+}
+
+.skill-icon {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 15px;
+}
+
+.skill-card h3 {
+  font-size: 20px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.skill-card p {
+  font-size: 16px;
+  color: #666;
+  line-height: 1.5;
+}
+
+/* Responsive styling for smaller screens */
+@media (max-width: 768px) {
+  .skill-card {
+    width: 100%;
+    /* Full width for smaller screens */
+    margin-right: 0;
+  }
+}
+
+#recommendations {
+  background-color: #f8f8f8;
+  padding: 40px;
+  text-align: center;
+  display: flex;
+  justify-content: space-around; /* Align cards with space around */
+  align-items: center;
+  flex-wrap: wrap; /* Allow cards to wrap to the next row */
+  margin: 20px;
+}
+
+.testimonial-card {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin: 10px; /* Adjust margin between cards */
+  width: calc(30% - 20px); /* 30% width with 20px margin on both sides */
+  box-sizing: border-box;
+}
+
+/* Add more styling for testimonial content and author if needed */
+.testimonial-content {
+  margin-bottom: 20px;
+}
+
+.testimonial-content p {
+  font-size: 16px;
+  color: #333;
+  line-height: 1.5;
+}
+
+.testimonial-author {
+  font-weight: bold;
+  color: #555;
+}
+/* Recommendation form */
+.recommendation-form {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin: 20px auto; /* Center the form horizontally */
+  max-width: 1140px; /* Set the max-width to 1200px */
+  width: 100%; /* Ensure the form takes the full width on smaller screens */
+}
+
+.recommendation-form h2 {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.recommendation-form label {
+  display: block;
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 8px;
+}
+
+.recommendation-form textarea,
+.recommendation-form input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 16px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 14px;
+}
+
+.recommendation-form button {
+  background-color: #007BFF;
+  color: #fff;
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.recommendation-form button:hover {
+  background-color: #0056b3;
+}
+/* Add this CSS for the popup styling */
+.popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  padding: 20px;
+  text-align: center;
+  z-index: 9999;
+}
+
+.popup h2 {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.popup p {
+  font-size: 16px;
+  color: #555;
+  line-height: 1.5;
+}
+/* Style for FAB */
+.fab {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #007BFF;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  padding: 10px;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.fab:hover {
+  background-color: #0056b3;
+}
+
+/* Style for the home icon inside FAB */
+.fab i {
+  font-size: 24px;
+}
+
+
+
+
+
